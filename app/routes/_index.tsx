@@ -1,41 +1,43 @@
 import type { MetaFunction } from "@remix-run/node";
+import { AboutMe } from "~/blocks/about";
+import ContactEmail from "~/blocks/contact-email";
+import ContactTg from "~/blocks/contact-tg";
+import ProjectShop from "~/blocks/project-shop";
+import ProjectWord from "~/blocks/project-word";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Портфолио" },
+    { name: "description", content: "Моё портфолио!" },
   ];
 };
 
+
+
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div className="bg-[#f7f2f2] h-[100vh] font-sans">
+      <h1 className="text-4xl font-medium font-serif text-center p-3">Kate`s portfolio</h1>
+      <div className="flex gap-5 mx-auto max-w-[1200px] max-sm:flex-col">
+        <div className="flex-grow basis-1/2">
+          <section >
+            <AboutMe />
+          </section>
+          <section className="flex gap-5 justify-between mt-5 max-sm:hidden">
+            <ContactTg />
+            <ContactEmail />
+          </section>
+        </div>
+        <section className="flex-grow basis-1/2 flex flex-col gap-5">
+          <ProjectWord />
+          <ProjectShop />
+        </section>
+        <section className="flex gap-5 justify-between mt-5 hidden max-sm:flex">
+            <ContactTg />
+            <ContactEmail />
+        </section>
+      </div>
+      
     </div>
   );
 }
