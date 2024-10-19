@@ -39,9 +39,9 @@ export function Project ({ project }: ProjectProps) {
                   ></path>
                 </svg>
       </div>
-      <div className="flex flex-col gap-5 absolute inset-0 w-full h-full bg-white rounded-[10px] p-8 opacity-0 group-hover:opacity-100 group-hover:animate-fadeIn shadow-[0_0_1px_1px_rgba(0,0,0,0.03)]">
+      <div className="flex flex-col gap-4 absolute inset-0 w-full h-full bg-white rounded-[10px] px-9 py-6 opacity-0 group-hover:opacity-100 group-hover:animate-fadeIn shadow-[0_0_1px_1px_rgba(0,0,0,0.03)] max-sm:p-4 max-sm:gap-1.5 max-md:p-7">
         <div>{project.description}</div>
-        <div className="flex flex-row gap-2 max-w-[200px] flex-wrap ">{project.tools.map((tool) => (
+        <div className="flex flex-row gap-2 max-w-[200px] flex-wrap max-md:text-sm max-md:gap-1">{project.tools.map((tool) => (
         <div key={tool} className="bg-[#98d0ff] rounded-md px-2 py-0.5">
           {tool}
         </div>

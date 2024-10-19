@@ -16,7 +16,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="bg-[#f7f2f2] h-[100vh] font-sans">
+    <div className="bg-[#f7f2f2] h-[100vh] font-sans p-3">
       <h1 className="text-4xl font-medium font-serif text-center p-3">Kate`s portfolio</h1>
       <div className="flex gap-5 mx-auto max-w-[1200px] max-sm:flex-col">
         <div className="flex-grow basis-1/2">
@@ -32,7 +32,7 @@ export default function Index() {
           <ProjectWord />
           <ProjectShop />
         </section>
-        <section className="flex gap-5 justify-between mt-5 hidden max-sm:flex">
+        <section className="flex gap-5 justify-between hidden max-sm:flex">
             <ContactTg />
             <ContactEmail />
         </section>
